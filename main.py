@@ -269,6 +269,7 @@ def erase(event, canvas):
     # 그림을 지우기 편하도록 paint의 픽셀보다 더욱 크게 설정
     x1, y1 = ( event.x-3 ), ( event.y-3 )
     x2, y2 = ( event.x+3 ), ( event.y+3 )
+    canvas.coords(circle, event.x - 6, event.y- 6, event.x + 6, event.y + 6) #그리는 위치도 보여주기 위해 브러시 크기보다 조금더 크게 만들기
     canvas.create_oval(x1, y1, x2, y2, fill=bg_color, outline=bg_color)
 
 def change_bg_color(canvas):
